@@ -56,8 +56,8 @@ This repository implements a realistic security gate around a small production-s
 ### 1. Clone
 
 ```bash
-git clone <your-repository-url>
-cd zero-trust-devsecops
+git clone https://github.com/Manhusayn/Zero-Trust-DevSecOps-Compliance-Pipeline
+cd Zero-Trust-DevSecOps-Compliance-Pipeline
 ```
 
 ### 2. Create a virtual environment
