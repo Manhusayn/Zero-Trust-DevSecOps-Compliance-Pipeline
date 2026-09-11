@@ -1,0 +1,7 @@
+rules:
+  - id: python-dangerous-eval
+    languages: [python]
+    message: Avoid eval(); use explicit parsing instead.
+    severity: ERROR
+    patterns:
+      - pattern: eval(...)
