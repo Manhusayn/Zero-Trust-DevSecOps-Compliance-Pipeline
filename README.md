@@ -190,10 +190,6 @@ conftest test k8s --policy policies/kubernetes
 
 The pipeline should fail. Restore the secure value afterward.
 
-## 📊 Interview explanation
-
-> “I designed the pipeline so trust is continuously re-established at every boundary. Source changes first pass tests, SAST and secret detection. Kubernetes manifests are checked against OPA policies before deployment. The image is rebuilt from a minimal non-root base, scanned for high and critical vulnerabilities, and an SBOM is produced for supply-chain visibility. At runtime, the workload uses restricted Pod Security settings, no automatic service-account token, dropped capabilities, a read-only filesystem and default-deny networking. Artifact signing can be enabled with Cosign. Therefore, passing one stage does not make later stages trusted; each boundary has its own control.”
-
 ## 📚 Documentation
 
 - [Architecture](docs/ARCHITECTURE.md)
@@ -202,7 +198,3 @@ The pipeline should fail. Restore the secure value afterward.
 ## ⚠️ Production notes
 
 This is a portfolio/lab implementation, not a complete enterprise compliance platform. Production environments should additionally integrate centralized identity, short-lived credentials, a registry admission controller, keyless signing/verification, vulnerability exceptions with approval workflow, centralized audit logs, secrets management, runtime detection, and organization-specific compliance policies.
-
-## ⭐ Portfolio value
-
-This project gives you one end-to-end story covering **DevSecOps + Kubernetes security + supply-chain security + policy-as-code + CI/CD + zero-trust principles** rather than a collection of disconnected tools.
